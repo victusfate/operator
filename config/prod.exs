@@ -63,6 +63,6 @@ config :logger, level: :info
 # Finally import the config/prod.secret.exs
 # which should be versioned separately.
 config :operator, Operator.Repo,
-  adapter: Ecto.Adapters.MongoDB,
+  adapter: Mongo.Ecto,
   url: System.get_env("DATABASE_URL"),
   pool_size: 20
